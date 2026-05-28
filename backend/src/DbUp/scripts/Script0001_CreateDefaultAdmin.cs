@@ -13,7 +13,7 @@ namespace DbUp.Scripts
         {
             // Get connection string from configuration
             // Password hash for the default admin
-            string passwordHash = "$2a$11$zsTS62pGn5Cfca4CgqRJxebx45je/3nJj.puxIArFwtAjHew67m6i";
+            string passwordHash = "$2a$11$11bRPmpqocZgoxwmgvC7NOt5J7XzIwWdGWRYuZp8VVYyYAAe05v/G";
 
             // Read profile image
             byte[] profileImage;

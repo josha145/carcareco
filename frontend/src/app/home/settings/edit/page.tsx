@@ -60,7 +60,7 @@ export default async function Page( ) {
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
              <div className="sm:col-span-2">
-                <FormInput name='vatRate' label='VAT Rate' defaultValue={options.pricing.invoice.vatRate}></FormInput> 
+                <FormInput name='vatRate' label='GST Rate' defaultValue={options.pricing.invoice.vatRate}></FormInput> 
               </div>
               <div className="sm:col-span-2">
                 <FormInput name='surCharge' label='Surcharge' defaultValue={options.pricing.invoice.surCharge}></FormInput> 

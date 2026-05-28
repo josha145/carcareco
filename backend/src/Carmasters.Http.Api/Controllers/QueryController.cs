@@ -34,11 +34,11 @@ namespace Carmasters.Http.Api.Controllers
                         union all
                         select id, 'Vehicle' as resourcename,concat_ws(' ',regnr,(case when vin is null or vin='' then null else '('||vin||')' end)) as name,'soiduk' as controller  from domain.vehicle  
                         union all
-                        select id,'Work nr. ' as resourcename, ''||id as name, 'too' as controller from domain.work
+                        select id,'Job no. ' as resourcename, ''||id as name, 'too' as controller from domain.work
                         union all
-                        select work.id, 'Invoice nr. ' as resourcename, ''||invoice.number as name,'too' as controller from domain.invoice inner join domain.work on work.invoiceid = invoice.id
+                        select work.id, 'Invoice ' as resourcename, ''||invoice.number as name,'too' as controller from domain.invoice inner join domain.work on work.invoiceid = invoice.id
                         union all
-                        select work.id, 'Estimate nr. ' as resourcename, ''||offer.id as name,'too' as controller from domain.offer inner join domain.work on work.id = offer.workid
+                        select work.id, 'Estimate ' as resourcename, ''||offer.id as name,'too' as controller from domain.offer inner join domain.work on work.id = offer.workid
                         union all
                         select id, 'Sparepart' as resourcename , code as name, 'varuosa' as controller from domain.sparepart
                         union all

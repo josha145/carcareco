@@ -23,23 +23,24 @@ const dataPage =({
     whenReady:IOnQuerySuccess,
     onFailure:IOnQueryFailure
 })=> {
- 
     const url = resourceName+'/page?'+new URLSearchParams({
       orderby: 'id',
       searchText: searchText,
       limit: '20',
-      offset: '0'
+      offset: '0',
+      desc: 'false'
     })
     query({
       url: url,
       method : 'GET',
-      onSuccess: (result) => { 
+      body: null,
+      onSuccess: (result) => {
         if (result.items) {
-          whenReady(result.items); 
-        } 
-        else  {
-          console.log(result); 
-          return [];
+          whenReady(result.items);
+        } else if (Array.isArray(result)) {
+          whenReady(result);
+        } else {
+          console.log(result);
         }
       },
       onFailure: onFailure

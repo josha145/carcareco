@@ -36,7 +36,7 @@ export default async function Page() {
             </div>
             <div className="mt-6 border-t border-gray-100">
                 <dl className="divide-y divide-gray-100">
-                    <DescriptionItem label='VAT Rate' value={options.pricing.invoice.vatRate}></DescriptionItem>
+                    <DescriptionItem label='GST Rate' value={options.pricing.invoice.vatRate}></DescriptionItem>
                     <DescriptionItem label='Surcharge' value={options.pricing.invoice.surCharge}></DescriptionItem>
                     <DescriptionItem label='Disclaimer' className="whitespace-pre-line" value={options.pricing.invoice.disclaimer}></DescriptionItem>
                     <DescriptionItem label='Signature line' value={(options.pricing.invoice.signatureLine?'Yes':'No')}></DescriptionItem>
