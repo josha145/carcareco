@@ -39,7 +39,7 @@ export default async function Page(
         },
         {
           dataField: 'regNr',
-          headerText: 'RegNr',
+          headerText: 'Rego',
           dataFormatter: ({ regNr, id }) => {
             return (
               <a href={'/home/vehicles/' + id} >
@@ -72,7 +72,7 @@ export default async function Page(
           }
         }
       ]}>
-        <SimpleSearchBar searchParams={searchParams} placeholder="vin, reg nr., owner or make ..."></SimpleSearchBar> 
+        <SimpleSearchBar searchParams={searchParams} placeholder="vin, rego, owner or make ..."></SimpleSearchBar> 
         </Search></form>
    
   </Main>
