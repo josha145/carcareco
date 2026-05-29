@@ -1,3 +1,4 @@
+import "car-makes-icons/dist/style.css";
 import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
